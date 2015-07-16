@@ -21,12 +21,12 @@ gstreamer-vaapi consists in a collection of VA-API based plugins for
 GStreamer and helper libraries.
 
   * `vaapidecode' is used to decode JPEG, MPEG-2, MPEG-4:2, H.264 AVC,
-    H.264 MVC, VP8, VC-1, WMV3 videos to VA surfaces, depending on the
+    H.264 MVC, VP8, VC-1,H.265/HEVC & WMV3 videos to VA surfaces, depending on the
     underlying hardware capabilities. This plugin is also able to
     implicitly download the decoded surface to raw YUV buffers.
 
   * `vaapiencode_<CODEC>' is used to encode into MPEG-2, H.264 AVC,
-    H.264 MVC, JPEG, VP8 videos, depending on the actual value of
+    H.264 MVC, JPEG, H.265/HEVC & VP8 videos, depending on the actual value of
     <CODEC> (mpeg2, h264, etc.). By default, raw format bitstreams
     are generated, so the result may be piped to a muxer.
     e.g. qtmux for MP4 containers.
@@ -77,7 +77,7 @@ Software requirements
 
 Hardware requirements
 
-  * AMD platforms with UVD2 (XvBA supported)
+  * AMD platforms with UVD2 (XvBA supported) or better (UVD3+)
   * Intel Eaglelake (G45)
   * Intel Ironlake, Sandybridge, Ivybridge, Haswell and Broadwell (HD Graphics)
   * Intel BayTrail
